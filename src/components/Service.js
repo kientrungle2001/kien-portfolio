@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import config from '../config.js';
-function Introduction(props) {
+function Service(props) {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
     return (
         <section id="service" className="site-section section-services overlay text-center">
             <div className="container">
@@ -28,4 +31,4 @@ function Introduction(props) {
     );
 }
 
-export default Introduction;
+export default Service;

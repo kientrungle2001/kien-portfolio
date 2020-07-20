@@ -1,5 +1,6 @@
 import React from 'react';
 import config from '../config.js';
+import {Link} from 'react-router-dom';
 
 function Header(props) {
   return (
@@ -22,10 +23,11 @@ function Header(props) {
 
                     <ul className="nav navbar-nav navbar-right">
 
-                        <li className="page-scroll"><a href="#hero">{config.home}</a></li>
-                        <li className="page-scroll"><a href="#about">{config.about}</a></li>
-                        <li className="page-scroll"><a href="#service">{config.service}</a></li>
-                        <li className="page-scroll"><a href="#portfolio">{config.portfolio}</a></li>
+                        <li className="page-scroll"><Link to="/">{config.home}</Link></li>
+                        <li className="page-scroll"><Link to="/about">{config.about}</Link></li>
+                        <li className="page-scroll"><Link to="/skill">{config.mySkills}</Link></li>
+                        <li className="page-scroll"><Link to="/service">{config.service}</Link></li>
+                        <li className="page-scroll"><Link to="/projects">{config.projectsTitle}</Link></li>
                         <li className="page-scroll"><a href="#contact">{config.contact}</a></li>
 
                     </ul>

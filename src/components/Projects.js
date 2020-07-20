@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import config from '../config.js';
 function Projects(props) {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
     return (
         <>
             <section id="portfolio" className="site-section section-portfolio">
@@ -17,8 +20,8 @@ function Projects(props) {
                                         <img src={project.img} className="img-res" alt="" />
                                         <div className="portfolio-item-info">
                                             <h4 >{project.title}</h4>
-                                            <a href="#" onClick={() => {config.setCurrentProject(project)}} data-toggle="modal" data-target="#portfolioItem1"><span className="glyphicon glyphicon-eye-open"></span></a>
-                                            <a href="#"><span className="glyphicon glyphicon-link"></span></a>
+                                            <a href="/" onClick={(event) => { event.preventDefault(); config.setCurrentProject(project) }} data-toggle="modal" data-target="#portfolioItem1"><span className="glyphicon glyphicon-eye-open"></span></a>
+                                            <a href="/" onClick={(event) => { event.preventDefault(); }}><span className="glyphicon glyphicon-link"></span></a>
                                         </div>
                                     </div>
                                 </div>

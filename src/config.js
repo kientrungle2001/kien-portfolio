@@ -112,6 +112,12 @@ export default {
   nameLabel: 'Họ và tên',
   emailLabel: 'Thư điện tử',
   messageLabel: 'Lời nhắn',
+  social: {
+    facebook: '',
+    twitter: '',
+    linkedin: '',
+    gplus: ''
+  },
   chunk: function (array, size) {
     const chunked_arr = [];
     for (let i = 0; i < array.length; i++) {

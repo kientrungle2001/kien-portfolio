@@ -7,7 +7,7 @@ class ProjectModal extends React.Component {
   }
   vistPage(event) {
     event.preventDefault();
-    let clicked = this.state && this.state.clicked || 0;
+    let clicked = this.state ? this.state.clicked : 0;
     this.setState({
       clicked: clicked+1
     });
@@ -42,7 +42,7 @@ class ProjectModal extends React.Component {
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header">
-                <a className="close" data-dismiss="modal"><span className="glyphicon glyphicon-remove"></span></a>
+                <a className="close" data-dismiss="modal" href="/" onClick={(event) => {event.preventDefault()}}><span className="glyphicon glyphicon-remove"></span></a>
                 <img className="img-res" src={props.img} alt="" />
               </div>
               <div className="modal-body">

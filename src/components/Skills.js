@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import config from '../config.js';
 function Skills(props) {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+}, []);
   return (
     <section className="site-section section-skills">
         <div className="container">
