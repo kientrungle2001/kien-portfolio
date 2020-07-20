@@ -92,6 +92,19 @@ export default {
       url: 'https://project-6.com'
     },
   ],
+  currentProject: null,
+  currentProjectListener: [],
+  setCurrentProject: function(currentProject) {
+    this.currentProject = currentProject;
+    this.currentProjectListener.forEach((listener) => {
+      listener(currentProject);
+    });
+  },
+  subscribeCurrentProject: function(listener) {
+    if(this.currentProjectListener.indexOf(listener) === -1) {
+      this.currentProjectListener.push(listener);
+    }
+  },
   yearsExperience: 10,
   yearsExperienceTitle: 'Năm kinh nghiệm',
   projectsDelivered: 30,
