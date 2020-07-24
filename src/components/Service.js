@@ -9,16 +9,16 @@ function Service(props) {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <h3>{config.introductionTitle}</h3>
+                        <h3>{config.serviceTitle}</h3>
                         <img src="assets/img/lines.svg" className="img-lines" alt="lines" />
                     </div>
-                    {config.introductions && config.introductions.map((introduction, index) => {
+                    {config.services && config.services.map((service, index) => {
                         return (
                             <div className="col-sm-4" key={index}>
                                 <div className="service">
-                                    <img src={introduction.img} alt={introduction.imgCaption} />
-                                    <h4>{introduction.title}</h4>
-                                    <p>{introduction.content}</p>
+                                    <img src={service.img} alt={service.imgCaption} />
+                                    <h4>{service.title}</h4>
+                                    <p>{service.content}</p>
                                 </div>
                             </div>
                         );

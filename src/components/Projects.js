@@ -20,8 +20,8 @@ function Projects(props) {
                                         <img src={project.img} className="img-res" alt="" />
                                         <div className="portfolio-item-info">
                                             <h4 >{project.title}</h4>
-                                            <a href="/" onClick={(event) => { event.preventDefault(); config.setCurrentProject(project) }} data-toggle="modal" data-target="#portfolioItem1"><span className="glyphicon glyphicon-eye-open"></span></a>
-                                            <a href="/" onClick={(event) => { event.preventDefault(); }}><span className="glyphicon glyphicon-link"></span></a>
+                                            <a href="#project-modal" role="button" onClick={() => { config.setCurrentProject(project) }} data-toggle="modal" data-target="#portfolioItem1"><span className="glyphicon glyphicon-eye-open"></span></a>
+                                            <a href="#project-link" onClick={(event) => { event.preventDefault(); }}><span className="glyphicon glyphicon-link"></span></a>
                                         </div>
                                     </div>
                                 </div>

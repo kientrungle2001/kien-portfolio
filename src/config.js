@@ -32,8 +32,8 @@ export default {
       value: 70
     },
   ],
-  introductionTitle: 'Những việc tôi làm',
-  introductions: [
+  serviceTitle: 'Những việc tôi làm',
+  services: [
     {
       title: 'Front-end',
       content: 'Là một nhà phát triển javascript, tôi có kinh nghiệm về các kỹ thuật HTML5 và CSS3 làm việc với jQuery hoặc các khung MVC javascript nâng cao hơn như ReactJS',
